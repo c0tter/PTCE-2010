@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PTCE Electrical | Electricians in Stockport</title>
+<meta name="description" content="PTCE 2010 Ltd, electricians in Stockport. Rewires, consumer unit upgrades, EICR safety checks, fault finding, lighting and sockets. Free quotes.">
+<meta name="theme-color" content="#121212">
+<link rel="canonical" href="https://c0tter.github.io/PTCE-2010/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- Link previews (WhatsApp, Facebook, iMessage, LinkedIn, X) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PTCE Electrical">
+<meta property="og:title" content="PTCE Electrical | Electricians in Stockport">
+<meta property="og:description" content="Wired right, first time. Rewires, fuse board upgrades, EICR safety checks and everyday electrical jobs across Stockport. Free quotes.">
+<meta property="og:url" content="https://c0tter.github.io/PTCE-2010/">
+<meta property="og:image" content="https://c0tter.github.io/PTCE-2010/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PTCE Electrical, Stockport: Wired right. First time.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PTCE Electrical | Electricians in Stockport">
+<meta name="twitter:description" content="Rewires, fuse boards, EICRs and everyday electrical jobs across Stockport. Free quotes.">
+<meta name="twitter:image" content="https://c0tter.github.io/PTCE-2010/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+<!-- Tells Google this is a local electrician (helps "electrician near me" searches) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "PTCE 2010 Ltd",
+  "url": "https://c0tter.github.io/PTCE-2010/",
+  "image": "https://c0tter.github.io/PTCE-2010/og-image.png",
+  "telephone": "{{PHONE}}",
+  "email": "{{EMAIL}}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Stockport",
+    "addressRegion": "Greater Manchester",
+    "addressCountry": "GB"
+  },
+  "areaServed": ["Stockport", "Bramhall", "Cheadle", "Hazel Grove", "Marple", "Romiley", "Heaton Moor", "Poynton", "Didsbury"]
+}
+</script>
+
+<style>
+  :root {
+    --black: #121212;
+    --panel: #1c1c1c;
+    --line-dark: #2e2e2e;
+    --paper: #f1eee7;
+    --paper-2: #e6e2d8;
+    --ink: #161616;
+    --muted: #6a665e;
+    --volt: #ffd60a;
+    --live: #8b5a2b;   /* UK cable colours: brown = live */
+    --neutral: #2f6fd6; /* blue = neutral */
+    --earth-g: #3aa655; /* green/yellow = earth */
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+    --cond: "Barlow Condensed", "Arial Narrow", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: Barlow, system-ui, sans-serif;
+    font-size: 17px;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.55;
+  }
+  a { color: inherit; }
+  .wrap { width: min(1180px, 100% - 32px); margin-inline: auto; }
+  h1, h2, h3 { font-family: var(--cond); text-transform: uppercase; line-height: .95; margin: 0; letter-spacing: .5px; }
+  .tag { font-family: var(--mono); font-size: .75rem; letter-spacing: 1.5px; text-transform: uppercase; }
+
+  /* The UK cable-colour stripe used as the brand accent */
+  .cable {
+    height: 8px;
+    background: linear-gradient(90deg,
+      var(--live) 0 25%, var(--black) 25% 50%, #8a8a8a 50% 75%, var(--neutral) 75% 100%);
+  }
+  .earth {
+    height: 8px;
+    background: repeating-linear-gradient(90deg, var(--earth-g) 0 22px, var(--volt) 22px 44px);
+  }
+
+  /* Buttons: square, chunky, trade-like */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--cond); font-weight: 700; font-size: 1.25rem; text-transform: uppercase; letter-spacing: 1px;
+    padding: 14px 24px; text-decoration: none; border: 2px solid currentColor; cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+  .btn-volt { background: var(--volt); color: var(--black); border-color: var(--volt); box-shadow: 5px 5px 0 var(--black); }
+  .btn-volt:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--black); }
+  .on-dark .btn-volt { box-shadow: 5px 5px 0 #000; }
+  .btn-line { color: #fff; background: transparent; }
+  .btn-line:hover { background: #fff; color: var(--black); }
+
+  /* Header */
+  header { background: var(--black); color: #fff; position: sticky; top: 0; z-index: 50; }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo-mark {
+    width: 44px; height: 44px; background: var(--volt); color: var(--black);
+    display: grid; place-items: center; clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
+  }
+  .logo-word { font-family: var(--cond); font-weight: 800; font-size: 1.9rem; letter-spacing: 2px; line-height: 1; }
+  .logo-sub { display: block; font-family: var(--mono); font-size: .62rem; letter-spacing: 2px; color: #9a9a9a; margin-top: 3px; }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a.link { text-decoration: none; font-family: var(--mono); font-size: .8rem; letter-spacing: 1.5px; text-transform: uppercase; color: #bdbdbd; }
+  .nav-links a.link:hover { color: var(--volt); }
+  .nav-links .btn { font-size: 1.1rem; padding: 10px 18px; box-shadow: none; }
+
+  /* Hero */
+  .hero {
+    position: relative; overflow: hidden;
+    background-color: var(--black);
+    background-image:
+      linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: #fff;
+    padding: 72px 0 88px;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: center; position: relative; z-index: 1; }
+  .hero .tag { color: var(--volt); display: flex; align-items: center; gap: 10px; }
+  .dot { width: 9px; height: 9px; background: var(--volt); border-radius: 50%; box-shadow: 0 0 0 0 rgba(255,214,10,.6); animation: pulse 2s infinite; }
+  @keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(255,214,10,0); } 100% { box-shadow: 0 0 0 0 rgba(255,214,10,0); } }
+  .hero h1 { font-size: clamp(3.4rem, 9vw, 7rem); font-weight: 800; margin: 18px 0 22px; }
+  .hero h1 .hl { color: var(--volt); display: block; }
+  .hero p { font-size: 1.2rem; color: #c9c9c9; max-width: 32em; margin: 0 0 32px; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 16px; }
+
+  /* Hero graphic: a schematic with current flowing along the wire */
+  .schematic { width: 100%; height: auto; }
+  .wire { fill: none; stroke: #3a3a3a; stroke-width: 3; }
+  .current { fill: none; stroke: var(--volt); stroke-width: 3; stroke-dasharray: 14 22; animation: flow 1.6s linear infinite; }
+  @keyframes flow { to { stroke-dashoffset: -36; } }
+  .bulb-glow { animation: glow 3s ease-in-out infinite; }
+  @keyframes glow { 50% { opacity: .55; } }
+
+  /* Section heads */
+  section { padding: 88px 0; }
+  .head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 40px; border-bottom: 2px solid var(--ink); padding-bottom: 18px; }
+  .head h2 { font-size: clamp(2.6rem, 6vw, 4.2rem); font-weight: 800; }
+  .head p { margin: 0; max-width: 30em; color: var(--muted); }
+  .head .tag { display: block; margin-bottom: 10px; color: var(--muted); }
+
+  /* Services as a consumer unit */
+  .board {
+    background: #dcd8cf; border: 2px solid var(--ink); padding: 26px 26px 30px;
+    box-shadow: 8px 8px 0 var(--ink);
+  }
+  .board-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+  .board-top .tag { color: #4a4740; }
+  .led { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: .75rem; font-weight: 700; }
+  .led i { width: 10px; height: 10px; border-radius: 50%; background: #3aa655; box-shadow: 0 0 8px #3aa655; }
+  .breakers { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; background: #bfbab0; border: 2px solid var(--ink); }
+  .breaker {
+    all: unset; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 12px;
+    background: #f7f6f2; border-right: 2px solid #bfbab0; padding: 16px 8px 18px; text-align: center;
+  }
+  .breaker:last-child { border-right: 0; }
+  .breaker:focus-visible { outline: 3px solid var(--neutral); outline-offset: -3px; }
+  .breaker .ref { font-family: var(--mono); font-weight: 700; font-size: .8rem; }
+  .slot { width: 30px; height: 64px; background: #2a2a2a; border-radius: 3px; position: relative; }
+  .toggle {
+    position: absolute; left: 3px; right: 3px; height: 30px; top: 3px;
+    background: #f2f2ee; border-radius: 2px; transition: top .15s ease;
+    box-shadow: inset 0 -3px 0 #cfcfc8;
+  }
+  .breaker[aria-pressed="false"] .toggle { top: 31px; }
+  .window { width: 22px; height: 8px; background: #c62828; }
+  .breaker[aria-pressed="false"] .window { background: #3aa655; }
+  .breaker .name { font-family: var(--cond); font-weight: 700; text-transform: uppercase; font-size: 1rem; line-height: 1.05; }
+
+  .schedule { margin-top: 26px; background: #fff; border: 2px solid var(--ink); }
+  .schedule-row { display: grid; grid-template-columns: 70px 1fr; border-bottom: 1px solid var(--paper-2); transition: opacity .2s ease, background .2s ease; }
+  .schedule-row:last-child { border-bottom: 0; }
+  .schedule-row .ref { font-family: var(--mono); font-weight: 700; padding: 18px; border-right: 1px solid var(--paper-2); }
+  .schedule-row div { padding: 16px 20px; }
+  .schedule-row h3 { font-size: 1.5rem; margin-bottom: 4px; }
+  .schedule-row p { margin: 0; color: var(--muted); }
+  .schedule-row.off { opacity: .35; }
+  .schedule-row.flash { background: #fff8cc; }
+  .hint { font-family: var(--mono); font-size: .75rem; color: #4a4740; margin: 14px 0 0; }
+
+  /* Process: terminals joined by a wire */
+  .dark { background: var(--black); color: #fff; }
+  .dark .head { border-color: #fff; }
+  .dark .head p, .dark .head .tag { color: #a8a8a8; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); position: relative; }
+  .steps::before {
+    content: ""; position: absolute; top: 22px; left: 22px; right: 22px; height: 3px;
+    background: repeating-linear-gradient(90deg, var(--volt) 0 14px, transparent 14px 26px);
+  }
+  .step { position: relative; padding-right: 24px; }
+  .terminal {
+    width: 46px; height: 46px; background: var(--black); border: 3px solid var(--volt); border-radius: 50%;
+    display: grid; place-items: center; font-family: var(--mono); font-weight: 700; color: var(--volt); position: relative;
+  }
+  .step h3 { font-size: 1.9rem; margin: 22px 0 8px; }
+  .step p { margin: 0; color: #b5b5b5; }
+
+  /* Coverage */
+  .areas { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); border-top: 2px solid var(--ink); border-left: 2px solid var(--ink); }
+  .area { display: flex; justify-content: space-between; align-items: baseline; padding: 16px 18px; border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink); background: #fff; }
+  .area strong { font-family: var(--cond); font-size: 1.35rem; text-transform: uppercase; }
+  .area span { font-family: var(--mono); font-size: .8rem; color: var(--muted); }
+  .area:hover { background: var(--volt); }
+  .area:hover span { color: var(--ink); }
+
+  /* Contact */
+  .contact { background: var(--volt); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .contact h2 { font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 800; }
+  .contact .lead { font-size: 1.15rem; margin: 18px 0 28px; max-width: 26em; }
+  .big-phone { display: inline-block; font-family: var(--cond); font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.4rem); text-decoration: none; border-bottom: 4px solid var(--ink); line-height: 1.1; }
+  .contact-links { display: grid; gap: 10px; margin-top: 28px; font-family: var(--mono); font-size: .9rem; }
+  .contact-links a { text-decoration: none; display: inline-flex; gap: 10px; align-items: center; }
+  .contact-links a:hover { text-decoration: underline; }
+  form { background: var(--black); color: #fff; padding: 30px; display: grid; gap: 16px; box-shadow: 8px 8px 0 rgba(0,0,0,.25); }
+  form .tag { color: var(--volt); }
+  label { display: grid; gap: 6px; font-family: var(--mono); font-size: .75rem; letter-spacing: 1px; text-transform: uppercase; color: #a8a8a8; }
+  input, select, textarea {
+    font: inherit; font-family: Barlow, sans-serif; font-size: 1rem; text-transform: none; letter-spacing: 0;
+    background: var(--panel); color: #fff; border: 2px solid var(--line-dark); padding: 12px 14px; width: 100%; border-radius: 0;
+  }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--volt); }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  form .btn { justify-content: center; box-shadow: none; }
+  .note { font-size: .85rem; color: #8a8a8a; margin: 0; }
+
+  footer { background: var(--black); color: #9a9a9a; font-size: .9rem; }
+  .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; padding: 36px 0 110px; }
+  footer strong { color: #fff; font-family: var(--cond); font-size: 1.3rem; text-transform: uppercase; letter-spacing: 1px; }
+
+  .callbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: none; background: var(--black); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); gap: 10px; border-top: 4px solid var(--volt); }
+  .callbar .btn { flex: 1; justify-content: center; box-shadow: none; }
+
+  @media (min-width: 761px) { .foot { padding-bottom: 36px; } }
+  @media (max-width: 960px) {
+    .hero-grid, .contact-grid { grid-template-columns: 1fr; }
+    .schematic { max-width: 340px; margin-inline: auto; }
+    .breakers { grid-template-columns: repeat(3, 1fr); }
+    .breaker:nth-child(3) { border-right: 0; }
+    .breaker:nth-child(-n+3) { border-bottom: 2px solid #bfbab0; }
+    .steps { grid-template-columns: 1fr 1fr; row-gap: 40px; }
+    .steps::before { display: none; }
+  }
+  @media (max-width: 760px) {
+    .nav-links { display: none; }
+    section { padding: 64px 0; }
+    .hero { padding: 48px 0 56px; }
+    .steps, .row { grid-template-columns: 1fr; }
+    .board { padding: 16px; box-shadow: 5px 5px 0 var(--ink); }
+    .schedule-row { grid-template-columns: 52px 1fr; }
+    .schedule-row .ref { padding: 16px 10px; }
+    .callbar { display: flex; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .current, .dot, .bulb-glow { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cable"></div>
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="PTCE Electrical home">
+      <span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></span>
+      <span><span class="logo-word">PTCE</span><span class="logo-sub">ELECTRICAL · STOCKPORT</span></span>
+    </a>
+    <nav class="nav-links">
+      <a class="link" href="#services">Services</a>
+      <a class="link" href="#areas">Coverage</a>
+      <a class="link" href="#contact">Contact</a>
+      <a class="btn btn-volt" href="tel:{{PHONE_LINK}}">Call {{PHONE}}</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag"><span class="dot"></span>Electricians · Stockport &amp; surrounding areas</span>
+        <h1>Wired right.<span class="hl">First time.</span></h1>
+        <p>Rewires, fuse board upgrades, safety checks and everyday electrical jobs for homes and businesses across Stockport. Straight talking, tidy work, fair prices.</p>
+        <div class="hero-ctas on-dark">
+          <a href="#contact" class="btn btn-volt">Get a free quote</a>
+          <a href="tel:{{PHONE_LINK}}" class="btn btn-line">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            {{PHONE}}
+          </a>
+        </div>
+      </div>
+
+      <!-- Schematic: supply > switch > bulb, with current flowing -->
+      <svg class="schematic" viewBox="0 0 470 360" role="img" aria-label="Circuit diagram with a light bulb switched on">
+        <path class="wire" d="M40 300 V60 H400 V300 H40"/>
+        <path class="current" d="M40 300 V60 H400 V300 H40"/>
+        <!-- supply -->
+        <rect x="16" y="150" width="48" height="70" fill="#121212" stroke="#ffd60a" stroke-width="3"/>
+        <text x="40" y="180" fill="#ffd60a" font-family="JetBrains Mono" font-size="13" font-weight="700" text-anchor="middle">230</text>
+        <text x="40" y="198" fill="#ffd60a" font-family="JetBrains Mono" font-size="13" font-weight="700" text-anchor="middle">V~</text>
+        <!-- switch -->
+        <rect x="170" y="40" width="80" height="40" fill="#121212"/>
+        <circle cx="178" cy="60" r="6" fill="#ffd60a"/>
+        <circle cx="242" cy="60" r="6" fill="#ffd60a"/>
+        <line x1="178" y1="60" x2="242" y2="60" stroke="#ffd60a" stroke-width="4"/>
+        <text x="210" y="30" fill="#8a8a8a" font-family="JetBrains Mono" font-size="12" text-anchor="middle">S1 · ON</text>
+        <!-- bulb -->
+        <circle class="bulb-glow" cx="400" cy="185" r="58" fill="#ffd60a" opacity=".18"/>
+        <circle cx="400" cy="185" r="30" fill="#121212" stroke="#ffd60a" stroke-width="3"/>
+        <path d="M379 164 421 206 M421 164 379 206" stroke="#ffd60a" stroke-width="3"/>
+        <text x="350" y="262" fill="#8a8a8a" font-family="JetBrains Mono" font-size="12" text-anchor="middle">L1</text>
+        <!-- earth symbol -->
+        <path d="M220 300 V322 M200 322 H240 M207 330 H233 M214 338 H226" stroke="#3aa655" stroke-width="3"/>
+        <circle cx="220" cy="300" r="5" fill="#3aa655"/>
+      </svg>
+    </div>
+  </section>
+  <div class="earth"></div>
+
+  <!-- Services as a consumer unit -->
+  <section id="services">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="tag">01 / Services</span>
+          <h2>What we do</h2>
+        </div>
+        <p>Domestic and commercial, big jobs and small. Not sure what you need? Give us a ring and we'll talk it through.</p>
+      </div>
+
+      <div class="board">
+        <div class="board-top">
+          <span class="tag">PTCE · Consumer unit</span>
+          <span class="led"><i></i><span id="live-count">6</span>/6 LIVE</span>
+        </div>
+        <div class="breakers" id="breakers">
+          <button class="breaker" aria-pressed="true" data-c="1"><span class="ref">C1</span><span class="slot"><span class="toggle"></span></span><span class="window"></span><span class="name">Rewires</span></button>
+          <button class="breaker" aria-pressed="true" data-c="2"><span class="ref">C2</span><span class="slot"><span class="toggle"></span></span><span class="window"></span><span class="name">Fuse boards</span></button>
+          <button class="breaker" aria-pressed="true" data-c="3"><span class="ref">C3</span><span class="slot"><span class="toggle"></span></span><span class="window"></span><span class="name">EICR checks</span></button>
+          <button class="breaker" aria-pressed="true" data-c="4"><span class="ref">C4</span><span class="slot"><span class="toggle"></span></span><span class="window"></span><span class="name">Fault finding</span></button>
+          <button class="breaker" aria-pressed="true" data-c="5"><span class="ref">C5</span><span class="slot"><span class="toggle"></span></span><span class="window"></span><span class="name">Lighting</span></button>
+          <button class="breaker" aria-pressed="true" data-c="6"><span class="ref">C6</span><span class="slot"><span class="toggle"></span></span><span class="window"></span><span class="name">Sockets</span></button>
+        </div>
+
+        <div class="schedule">
+          <div class="schedule-row" id="c1"><span class="ref">C1</span><div><h3>Full &amp; partial rewires</h3><p>Bring older properties up to current standards, with minimal disruption and making good as we go.</p></div></div>
+          <div class="schedule-row" id="c2"><span class="ref">C2</span><div><h3>Consumer unit upgrades</h3><p>Swap an old fuse box for a modern consumer unit with RCD protection, keeping your household safe.</p></div></div>
+          <div class="schedule-row" id="c3"><span class="ref">C3</span><div><h3>EICR safety checks</h3><p>Electrical Installation Condition Reports for landlords, buyers, sellers and homeowners.</p></div></div>
+          <div class="schedule-row" id="c4"><span class="ref">C4</span><div><h3>Fault finding &amp; repairs</h3><p>Tripping circuits, dead sockets, flickering lights. We track down the cause and fix it properly.</p></div></div>
+          <div class="schedule-row" id="c5"><span class="ref">C5</span><div><h3>Lighting</h3><p>Downlights, pendants, garden and security lighting, fitted neatly inside and out.</p></div></div>
+          <div class="schedule-row" id="c6"><span class="ref">C6</span><div><h3>Sockets, switches &amp; extensions</h3><p>Extra sockets, USB points, kitchens, bathrooms, and wiring for extensions and loft conversions.</p></div></div>
+        </div>
+        <p class="hint">↑ Go on, flip a breaker.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="dark">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="tag">02 / How it works</span>
+          <h2>No fuss. No surprises.</h2>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="terminal">1</div><h3>Get in touch</h3><p>Call, email or fill in the form. Tell us what you need.</p></div>
+        <div class="step"><div class="terminal">2</div><h3>Free quote</h3><p>A clear price up front, with no hidden extras.</p></div>
+        <div class="step"><div class="terminal">3</div><h3>Job done</h3><p>Safe, neat work, finished when we said it would be.</p></div>
+        <div class="step"><div class="terminal">4</div><h3>Tested &amp; certified</h3><p>Everything tested, with the paperwork to prove it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coverage -->
+  <section id="areas">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="tag">03 / Coverage</span>
+          <h2>Where we work</h2>
+        </div>
+        <p>Based in Stockport, working across the surrounding towns. Not on the list? Just ask.</p>
+      </div>
+      <div class="areas">
+        <div class="area"><strong>Stockport</strong><span>SK1-3</span></div>
+        <div class="area"><strong>Heaton Moor</strong><span>SK4</span></div>
+        <div class="area"><strong>Heaton Chapel</strong><span>SK4</span></div>
+        <div class="area"><strong>Reddish</strong><span>SK5</span></div>
+        <div class="area"><strong>Offerton</strong><span>SK2</span></div>
+        <div class="area"><strong>Marple</strong><span>SK6</span></div>
+        <div class="area"><strong>Romiley</strong><span>SK6</span></div>
+        <div class="area"><strong>Bredbury</strong><span>SK6</span></div>
+        <div class="area"><strong>Hazel Grove</strong><span>SK7</span></div>
+        <div class="area"><strong>Bramhall</strong><span>SK7</span></div>
+        <div class="area"><strong>Cheadle</strong><span>SK8</span></div>
+        <div class="area"><strong>Cheadle Hulme</strong><span>SK8</span></div>
+        <div class="area"><strong>Poynton</strong><span>SK12</span></div>
+        <div class="area"><strong>Didsbury</strong><span>M20</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <span class="tag">04 / Contact</span>
+        <h2>Need a sparky?</h2>
+        <p class="lead">A phone call is the quickest way to get a price. Or send the form and we'll come back to you.</p>
+        <a class="big-phone" href="tel:{{PHONE_LINK}}">{{PHONE}}</a>
+        <div class="contact-links">
+          <a href="mailto:{{EMAIL}}">✉ {{EMAIL}}</a>
+          <a href="https://www.facebook.com/p/PTCE-2010-LTD-100054228260699/" target="_blank" rel="noopener">↗ Facebook: see our latest jobs</a>
+        </div>
+      </div>
+
+      <form id="quote-form">
+        <span class="tag">Quote request</span>
+        <div class="row">
+          <label>Name<input name="name" required autocomplete="name"></label>
+          <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+        </div>
+        <label>Postcode<input name="postcode" autocomplete="postal-code"></label>
+        <label>Job type
+          <select name="job">
+            <option>Rewire</option>
+            <option>Fuse board / consumer unit</option>
+            <option>EICR / safety check</option>
+            <option>Fault finding / repair</option>
+            <option>Lighting</option>
+            <option>Sockets / switches</option>
+            <option selected>Something else</option>
+          </select>
+        </label>
+        <label>Details<textarea name="details" rows="4" placeholder="A few words about the job"></textarea></label>
+        <button class="btn btn-volt" type="submit">Send enquiry</button>
+        <p class="note">Opens your email app with the details filled in, ready to send.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="cable"></div>
+  <div class="wrap foot">
+    <div>
+      <strong>PTCE 2010 Limited</strong><br>
+      Registered in England &amp; Wales, company no. 13858584<br>
+      Registered office: 136 Hall Street, Stockport, SK1 4HE
+    </div>
+    <div>&copy; <span id="year"></span> PTCE 2010 Ltd</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a href="tel:{{PHONE_LINK}}" class="btn btn-volt">Call now</a>
+  <a href="#contact" class="btn btn-line">Quote</a>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Consumer unit: flipping a breaker switches its row in the circuit schedule
+  var breakers = document.querySelectorAll('.breaker');
+  breakers.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var on = b.getAttribute('aria-pressed') !== 'true';
+      b.setAttribute('aria-pressed', on);
+      var row = document.getElementById('c' + b.dataset.c);
+      row.classList.toggle('off', !on);
+      if (on) {
+        row.classList.add('flash');
+        setTimeout(function () { row.classList.remove('flash'); }, 600);
+      }
+      document.getElementById('live-count').textContent =
+        document.querySelectorAll('.breaker[aria-pressed="true"]').length;
+    });
+  });
+
+  // No server needed: builds an email from the form and opens the visitor's mail app
+  document.getElementById('quote-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = new FormData(this);
+    var body =
+      'Name: ' + f.get('name') + '\n' +
+      'Phone: ' + f.get('phone') + '\n' +
+      'Postcode: ' + f.get('postcode') + '\n' +
+      'Job: ' + f.get('job') + '\n\n' +
+      f.get('details');
+    location.href = 'mailto:{{EMAIL}}?subject=' +
+      encodeURIComponent('Quote request: ' + f.get('job')) +
+      '&body=' + encodeURIComponent(body);
+  });
+</script>
+</body>
+</html>
